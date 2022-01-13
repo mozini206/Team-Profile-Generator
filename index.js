@@ -1,15 +1,19 @@
+const Manager = require('./lib/Manager')
+const employees = [];
+
 // Actions need
 
 // Ask them for manager info
 
     //Prompt the user for the data
         // THEN create and store object for the manager
+        employees.push (new Manager())// pass in data from inquirer)
         // THEN ask for what they would like to do next
 
 // Ask them for engineer info
           //Prompt the user for the data
          // THEN create and store object for the manager
-        // THEN ask for what they would like to do next
+         // THEN ask for what they would like to do next
       
 
 // Ask what they would like to do next
