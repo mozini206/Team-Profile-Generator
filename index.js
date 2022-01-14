@@ -4,23 +4,6 @@ const employees = [];
 
 // Actions need
 
-// Ask them for manager info
-function askManagerInfo(){
-    //Prompt the user for the data
-    inquirer
-        .prompt('questions')
-        .then((answers) => {
-
-            employees.push (new Manager())// pass in data from inquirer)
-
-        })
-         // THEN ask for what they would like to do next
-            askForNextAction()
-
-        
-
-
-}
 
 async function askForManagerInfo(){
     //Prompt the user for the data
@@ -50,3 +33,7 @@ async function askForManagerInfo(){
 
 
 // Use all of the collected employee employee data to build an html page
+
+askForManagerInfo()
+askForEngineerInfo()
+askForIntern()
