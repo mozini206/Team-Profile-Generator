@@ -6,8 +6,8 @@ describe("Employee", () => {
     const employee = new Employee('Mohamed', 21, "momo206@uw.edu");
 
     expect(employee.name).toEqual(expect.any(String));
-    expect(employee.getId).toEqual(expect.any(Number));
-    expect(employee.getEmail).toEqual(expect.any(String));
+    expect(employee.id).toEqual(expect.any(Number));
+    expect(employee.email).toEqual(expect.any(String));
 
 
 
@@ -18,9 +18,9 @@ describe("Employee", () => {
         // Testing of object properties after construction a new instance
         it ("should build with prop x when given y", () => {
 
-        })
+        });
 
-    })
+    });
 
     describe("getName", () => {
 

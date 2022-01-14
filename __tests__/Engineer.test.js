@@ -6,9 +6,9 @@ describe("Engineer", () => {
     const engineer = new Engineer("Joe Kay", 25, "joekay@soulection.com", "joekay@github.com");
 
     expect(engineer.name).toEqual(expect.any(String));
-    expect(engineer.getId).toEqual(expect.any(Number));
-    expect(engineer.getEmail).toEqual(expect.any(String));
-    expect(engineer.getGitHub).toEqual(expect.any(String));
+    expect(engineer.id).toEqual(expect.any(Number));
+    expect(engineer.email).toEqual(expect.any(String));
+    expect(engineer.github).toEqual(expect.any(String));
 
 
     describe("Intialization", () => {   
