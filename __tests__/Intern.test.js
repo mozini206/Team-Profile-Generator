@@ -1,63 +1,21 @@
-const Intern = require('../lib/Intern')
-
-const Employee = require('../lib/Employee')
-
-describe("Intern", () => {
-
-   
-    const intern = new Intern('Zak', 20, "zak206@uw.edu");
-
-    expect(intern.name).toEqual(expect.any(String));
-    expect(intern.id).toEqual(expect.any(Number));
-    expect(intern.email).toEqual(expect.any(String));
+const Intern = require('../lib/Intern');
 
 
-
-
-
-    describe("Intialization", () =>{
-        
-        // Testing of object properties after construction a new instance
-        it ("should build with prop x when given y", () => {
-
-        });
-
-    });
-
-    describe("getName", () => {
-
-
-        const intern = new Intern('Zak', 20, "zak206@uw.edu");
-        
-        expect(intern.getName()).toEqual(expect.any(String));
-
+describe('creates an Intern object', () => {
+    const intern = new Intern('Nicole', 90, 'nicole.elisaw@gmail', 'SFSU');
     
-
-    });
-
-
-    describe("getId", () => {
-        const intern = new Intern('Zak', 20, "zak206@uw.edu");
-
-        expect(intern.getId()).toEqual(expect.any(Number));
-
-
-    });
-
-    describe("geEmail", () => {
-        const intern = new Intern('Zak', 20, "zak206@uw.edu");
-        expect(intern.getEmail()).toEqual(expect.any(String));
-
-
-    });
-
-    describe("geRole", () => {
-        const intern = new Intern('Zak', 20, "zak206@uw.edu");
-        expect(intern.getRole()).toEqual('Employee');
-
-
-
-
-    });
-
+    expect(intern.school) .toEqual(expect.any(String));
 });
+
+
+describe('gets Intern school', () => {
+    const intern = new Intern('Nicole', 90, 'nicole.elisaw@gmail', 'SFSU');
+    
+    expect(intern.getSchool()).toEqual(expect.stringContaining(intern.school.toString()));
+});
+
+describe('gets role of employee', () => {
+    const intern = new Intern('Nicole', 90, 'nicole.elisaw@gmail.com', 'SFSU');
+
+    expect(intern.getRole()).toEqual("Intern");
+}); 

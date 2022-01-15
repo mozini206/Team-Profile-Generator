@@ -1,6 +1,6 @@
 const Employee = require('../lib/Employee')
 
-describe("Employee", () => {
+describe("Creates employee object", () => {
 
    
     const employee = new Employee('Mohamed', 21, "momo206@uw.edu");
@@ -11,21 +11,10 @@ describe("Employee", () => {
 
 
 
+    describe("gets employee name", () => {
 
 
-    describe("Intialization", () =>{
-        
-        // Testing of object properties after construction a new instance
-        it ("should build with prop x when given y", () => {
-
-        });
-
-    });
-
-    describe("getName", () => {
-
-
-        const employee = new Employee('Mohamed', 17, "momo206@uw.edu");
+        const employee = new Employee('Mohamed', 21, "momo206@uw.edu");
         
         expect(employee.getName()).toEqual(expect.any(String));
 
@@ -34,7 +23,7 @@ describe("Employee", () => {
     });
 
 
-    describe("getId", () => {
+    describe("gets employee ID", () => {
         const employee = new Employee('Mohamed', 21, "momo206@uw.edu");
 
         expect(employee.getId()).toEqual(expect.any(Number));
@@ -42,14 +31,14 @@ describe("Employee", () => {
 
     });
 
-    describe("geEmail", () => {
+    describe("gets employee email", () => {
         const employee = new Employee('Mohamed', 21, "momo206@uw.edu");
         expect(employee.getEmail()).toEqual(expect.any(String));
 
 
     });
 
-    describe("geRole", () => {
+    describe("gets the role from getRole()", () => {
         const employee = new Employee('Mohamed', 21, "momo206@uw.edu");
         expect(employee.getRole()).toEqual('Employee');
 
