@@ -1,20 +1,26 @@
-const Manager = require('../lib/Manager')
-
-describe("Creates Manager Object", ()=> {
-    const manager = new Manager('Tuchel', 50, "tuchel@chelseafc.com", 5);
-
-    expect(manager.officeNumber).toEqual(expect.any(number));
+const Manager = require('../lib/Manager');
 
 
+describe("Manager Tests", () => {
+    describe("Creates manager Object", () => {
 
-    describe("geRole", () => {
-        const manager = new Manager('Mohamed', 21, "momo206@uw.edu");
-        expect(manager.getRole()).toEqual('Manager');
+            it("should create an manager object", () => {
+            const manager = new Manager('Tuchel', 50, "tuchel@chelseafc.com", 5);
+            expect(manager.officeNumber).toEqual(expect.any(Number));
+
+            
+        });
+
+        it("should get role of the said employee ie manager", () => {
+            const manager = new Manager('Tuchel', 50, "tuchel@chelseafc.com", 5);
+            expect(manager.getRole()).toEqual('Manager');
+    
+        });
+
+    })
+})
 
 
 
 
-    });
 
-
-});
